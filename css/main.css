@@ -1459,16 +1459,16 @@ pre code {
   margin-left: 10px;
 }
 .sidebar-nav li:hover {
-  color: #fc6423;
+  color: #00c6ff;
 }
 .sidebar-toc-active .sidebar-nav-toc,
 .sidebar-overview-active .sidebar-nav-overview {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: #00c6ff;
+  color: #00c6ff;
 }
 .sidebar-toc-active .sidebar-nav-toc:hover,
 .sidebar-overview-active .sidebar-nav-overview:hover {
-  color: #fc6423;
+  color: #00c6ff;
 }
 .sidebar-panel {
   display: none;
@@ -1506,7 +1506,7 @@ pre code {
   }
 }
 .sidebar-toggle:hover .toggle-line {
-  background: #fc6423;
+  background: #00c6ff;
 }
 .post-toc {
   font-size: 0.875em;
@@ -1542,14 +1542,14 @@ pre code {
   display: block;
 }
 .post-toc .nav .active > a {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: #00c6ff;
+  color: #00c6ff;
 }
 .post-toc .nav .active-current > a {
-  color: #fc6423;
+  color: #00c6ff;
 }
 .post-toc .nav .active-current > a:hover {
-  color: #fc6423;
+  color: #00c6ff;
 }
 .site-state {
   display: flex;
@@ -2155,9 +2155,9 @@ pre code {
 }
 .reward-container button {
   background: transparent;
-  border: 2px solid #fc6423;
+  border: 2px solid #00c6ff;
   border-radius: 2px;
-  color: #fc6423;
+  color: #00c6ff;
   cursor: pointer;
   line-height: 2;
   outline: 0;
@@ -2166,7 +2166,7 @@ pre code {
   vertical-align: text-top;
 }
 .reward-container button:hover {
-  background: #fc6423;
+  background: #00c6ff;
   border: 2px solid transparent;
   color: #fff;
 }
@@ -2703,14 +2703,14 @@ mark.search-keyword {
 .sub-menu .menu-item a:hover,
 .sub-menu .menu-item span.exturl:hover {
   background: transparent;
-  color: #fc6423;
+  color: #00c6ff;
 }
 .sub-menu .menu-item-active {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: #00c6ff;
+  color: #00c6ff;
 }
 .sub-menu .menu-item-active:hover {
-  border-bottom-color: #fc6423;
+  border-bottom-color: #00c6ff;
 }
 .sidebar {
   background: initial;
@@ -2908,4 +2908,100 @@ mark.search-keyword {
   .pagination {
     margin: 8px 0 0;
   }
+}
+/** 普通指针样式**/
+body {
+  cursor: url("/images/Arrow.cur"), default;
+}
+/** 链接指针样式**/
+a:hover {
+  cursor: url("/images/Hand.cur"), pointer;
+}
+p a:not(.light-link) {
+  position: relative;
+  margin: auto 4px;
+  color: #00c6ff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  -webkit-perspective-origin: 50% 100%;
+  perspective-origin: 50% 100%;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: inherit;
+  width: inherit;
+}
+p a:not(.light-link):hover,
+p a:not(.light-link):focus {
+  color: #fff;
+}
+p a:not(.light-link)::before,
+p a:not(.light-link)::after {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  z-index: -1;
+  box-sizing: content-box;
+  padding: 0 4px;
+  width: 100%;
+  height: 100%;
+  content: '';
+}
+p a:not(.light-link)::before {
+  background-color: #00c6ff;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+p a:not(.light-link):hover::before,
+p a:not(.light-link):focus::before {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+p a:not(.light-link)::after,
+.content-copyright {
+  overflow: hidden;
+}
+.post-body h2 {
+  position: relative;
+  margin: 20px 0 32px !important;
+  font-size: 1.35em;
+  font-weight: 600;
+  border-bottom: none !important;
+}
+.post-body h2::before {
+  content: "";
+  width: 100%;
+  bottom: -10px;
+  position: absolute;
+}
+.post-body h2::after {
+  transition: all 0.35s;
+  content: "";
+  position: absolute;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  width: 2em;
+  left: 0;
+  box-shadow: 0 3px 3px rgba(32,160,255,0.4);
+  height: 3px;
+  bottom: -10px;
+}
+.post-body h2:hover::after {
+  width: 3em;
+}
+.post-body h3 {
+  padding-left: 10px;
+  font-size: 1.1em;
+  line-height: 1.2;
+  border-left: 4px solid #0f81fb;
+  padding-top: 0;
+  border-bottom: none !important;
 }
