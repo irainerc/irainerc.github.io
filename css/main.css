@@ -3006,3 +3006,13 @@ p a:not(.light-link)::after,
   color: #0072ff;
   font-family: "src";
 }
+hr {
+  border: 1px dashed #ddd;
+  height: 0px;
+}
+blockquote {
+  border-left: 4px solid #00c6ff;
+  color: var(--blockquote-color);
+  margin: 0;
+  padding: 0 20px;
+}
