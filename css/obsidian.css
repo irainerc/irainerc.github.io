@@ -2,8 +2,8 @@
   --font-color: #000;
   --night-font-color: #ddd;
   --primary: #b2fefa;
-  --secondary: #0ed2f7;
-  --dark: #0052d4;
+  --secondary: #00c6ff;
+  --dark: #0072ff;
   --gradient-light: #5d9eea;
   --gradient-middle: #0f27b5;
   --gradient-dark: #100e17;
@@ -165,8 +165,8 @@ h5 a,
 h6 a {
   font-weight: 600;
   background: #b2fefa !important;
-  background: -webkit-linear-gradient(to right, #b2fefa, #0ed2f7, #0052d4) !important;
-  background: linear-gradient(to right, #b2fefa, #0ed2f7, #0052d4) !important;
+  background: -webkit-linear-gradient(to right, #b2fefa, #00c6ff, #0072ff) !important;
+  background: linear-gradient(to right, #b2fefa, #00c6ff, #0072ff) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-box-decoration-break: clone !important;
